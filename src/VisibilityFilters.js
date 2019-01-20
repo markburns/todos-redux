@@ -1,7 +1,7 @@
 import React from "react";
 import cx from "classnames";
 import { connect } from "react-redux";
-import { getTodos } from "./TodoList";
+import { getTodos } from "./actions";
 const INCOMPLETE = "Todo";
 const COMPLETED = "Completed";
 const ALL = "All";

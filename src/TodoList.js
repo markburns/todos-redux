@@ -3,22 +3,6 @@ import { connect } from "react-redux";
 import Todo from "./Todo";
 import { filterByVisibility } from "./VisibilityFilters";
 
-const getTodosState = store => store.todos;
-
-const getTodoList = store =>
-  getTodosState(store) ? getTodosState(store).allIds : [];
-
-const getTodoById = (store, id) =>
-  getTodosState(store) ? { ...getTodosState(store).byIds[id], id } : {};
-
-/**
- *
- * example of a slightly more complex selector
- * select from store combining information from multiple reducers
- */
-export const getTodos = store =>
-  getTodoList(store).map(id => getTodoById(store, id));
-
 const TodoList = ({ todos }) => (
   <ul className="todo-list">
     {todos && todos.length
