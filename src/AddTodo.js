@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 
-import { ADD_TODO } from "./actions";
+import { ADD_TODO } from "./constants";
 
 let nextTodoId = 0;
 

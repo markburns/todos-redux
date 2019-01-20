@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import cx from "classnames";
-import { TOGGLE_TODO } from "./actions";
+import { TOGGLE_TODO } from "./constants";
 
 const toggleTodo = id => ({
   type: TOGGLE_TODO,

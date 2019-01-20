@@ -1,5 +1,4 @@
-const ADD_TODO = "ADD_TODO";
-const TOGGLE_TODO = "TOGGLE_TODO";
+import { ADD_TODO, TOGGLE_TODO } from "./constants";
 
 const initialState = {
   allIds: [],
@@ -18,8 +17,7 @@ const getTodoById = (store, id) =>
  * example of a slightly more complex selector
  * select from store combining information from multiple reducers
  */
-export const getTodos = store =>
-  getTodoList(store).map(id => getTodoById(store, id));
+const getTodos = store => getTodoList(store).map(id => getTodoById(store, id));
 
 const todos = function(state = initialState, action) {
   switch (action.type) {
@@ -55,4 +53,4 @@ const todos = function(state = initialState, action) {
   }
 };
 
-export { todos, ADD_TODO, TOGGLE_TODO };
+export { todos, getTodos };
