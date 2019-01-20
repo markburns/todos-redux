@@ -6,7 +6,7 @@ import AddTodo from "./AddTodo";
 import TodoList from "./TodoList";
 import { VisibilityFilters, visibilityReducer } from "./VisibilityFilters";
 import "./styles.css";
-import { todos } from "./actions";
+import { todosReducer } from "./reducer";
 
 const store = createStore(combineReducers({ todos, visibilityReducer }));
 
